@@ -241,3 +241,11 @@
         line-height: 18px;
     }
  }
+
+
+ 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)   { 
+    .products .products-slider .product-item-info .title a {
+        max-width: 275px;
+    }
+}
