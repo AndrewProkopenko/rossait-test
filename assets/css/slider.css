@@ -32,9 +32,7 @@
 .slider .slider-next {
     right: 30px;
     transform: rotate(180deg);
-}
-.slider .slider-container {  
-}
+} 
 
 .slider .slide-row {
     display: flex;

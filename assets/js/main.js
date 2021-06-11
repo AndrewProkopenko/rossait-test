@@ -1,22 +1,24 @@
 
-// mobile menu
-const headerBtn = document.querySelector('.js-header-menu-btn'); // кнопка открытия мобильного меню сбоку 
-const headerMenu = document.querySelector('.js-header-menu') ;
-const headerWrapper = document.querySelector('.js-menu-wrapper');
+$(document).ready(function() { 
+    // mobile menu
+    const headerBtn = document.querySelector('.js-header-menu-btn'); // кнопка открытия мобильного меню сбоку 
+    const headerMenu = document.querySelector('.js-header-menu') ;
+    const headerWrapper = document.querySelector('.js-menu-wrapper');
 
-headerBtn.addEventListener('click', openMenu); 
-headerWrapper.addEventListener('click', closeMenu);
+    headerBtn.addEventListener('click', openMenu); 
+    headerWrapper.addEventListener('click', closeMenu);
 
-function openMenu() { 
-    headerMenu.classList.add('mobile-menu-open') 
-    headerWrapper.classList.add('show') 
-    document.body.style.overflow = 'hidden'
-}
-function closeMenu() {
-    headerMenu.classList.remove('mobile-menu-open') 
-    headerWrapper.classList.remove('show') 
-    document.body.style.overflow = '' 
-}
+    function openMenu() { 
+        headerMenu.classList.add('mobile-menu-open') 
+        headerWrapper.classList.add('show') 
+        document.body.style.overflow = 'hidden'
+    }
+    function closeMenu() {
+        headerMenu.classList.remove('mobile-menu-open') 
+        headerWrapper.classList.remove('show') 
+        document.body.style.overflow = '' 
+    }
+})
 
 
 
@@ -33,7 +35,7 @@ $(document).ready(function(){
         speed: 800,
         customPaging: function(slick,index) {
             const numZero = index >= 9 ? '' : '0';   
-            return `<a  > ${numZero}` + (index + 1) + '</a>';
+            return "<a  > ".concat(numZero) + (index + 1) + '</a>';
         }, 
         appendDots: $('.js-custom-dots-container'),  
     });
@@ -91,7 +93,8 @@ function convertToRoman(number) {
         { value: 4, char: 'IV' },
         { value: 1, char: 'I' }
     ]
-    return data.reduce((result, currentValue) => {
+    
+    return data.reduce( function(result, currentValue) {
         while (number >= currentValue.value) {
             result += currentValue.char;
             number -= currentValue.value;
