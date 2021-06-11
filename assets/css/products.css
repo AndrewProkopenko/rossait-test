@@ -216,6 +216,14 @@
     }
  }
  @media screen and (max-width: 576px) {
+    .products .products-content h3 {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .products .products-content p {
+        font-size: 15px;
+        line-height: 18px;
+    }
     .products .products-slider .product-item-thumb {
         height: 300px;
     }
@@ -224,6 +232,14 @@
         bottom: 20px;
         left: 20px;
         right: 20px;
-
+    }
+    .products .products-slider .product-item-info {
+        text-align: center;
+    }
+    .products .products-slider .product-item-info .title a {
+        padding-right: 0;
+        margin-bottom: 5px;
+        font-size: 15px;
+        line-height: 18px;
     }
  }
